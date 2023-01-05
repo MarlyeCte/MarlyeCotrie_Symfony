@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Experience Utilisateur
+{% endblock %}
+
+{% block body %}
+
+	<section class="GlobalHeader">
+		<div class="GlobalHeaderTitle">
+			<h1>Page Experience Utilisateur</h1>
+		</div>
+	</section>
+
+	<section class="GlobalMain">
+		<div class="GlobalMainTitle">
+			<h2>Experience Utilisateur</h2>
+			<h2>Amuser vous a changer les couleurs du site :</h2>
+		</div>
+
+		<section class="modifSiteAll">
+
+			<button id="resetAll" class="ButtonChange">Réinitialiser toutes les box</button>
+
+			<section class="modifSite">
+				<div class="modifBox">
+					<div class="modifBoxChange">
+						<p class="TextChange">Change la couleur de tout les texte des boxs :</p>
+						<input type="color" name="" class="changeCouleur" data-selector=".TextChange" data-reset="color: black;">
+					</div>
+				</div>
+
+				<div class="modifBox">
+					<div class="modifBoxChange">
+						<p class="TextChange">Changement de la couleur du fond des box</p>
+						<input type="color" name="" class="changeCouleur" data-selector=".modifBox" data-reset="background-color: transparent;">
+					</div>
+				</div>
+				
+				<div class="modifBox">
+					<div class="modifBoxChange">
+						<p class="TextChange">Change la couleur du texte et le contour du bouton :</p>
+						<input type="color" name="" class="changeCouleur" data-selector=".ButtonChange" data-reset="background-color: transparent;">
+					</div>
+				</div>
+
+
+			</section>
+
+		</section>
+	</section>
+
+	<style>
+
+		#resetAll {
+			width: 35%;
+			height: 50px;
+			font-size: 20px;
+			background-color: white;
+			border: 1px solid;
+			box-shadow: rgb(0 0 0 / 50%) 0 1px 13px 7px inset;
+			transition: all 0.2s ease-out;
+		}
+
+		#resetAll:hover,
+		.modifBox:hover {
+			border-radius: 20px;
+			cursor: pointer;
+			color: white;
+			background-color: rgb(0 0 0 / 50%);
+		}
+
+		.modifBox:hover {
+			transform: scale(1.1);
+		}
+
+		.modifSiteAll {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+
+		.modifSite {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		.modifBox {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+			border-radius: 20px;
+			width: 300px;
+			height: 200px;
+			position: relative;
+			transition: all 0.2s ease-out 0s;
+			box-shadow: rgb(0 0 0 / 50%) 0 1px 13px 7px inset;
+		}
+
+		.modifBox input {
+			width: 40%;
+		}
+
+		.TextChange {
+			transition: all 0.2s ease-out 0s;
+			font-size: 18px;
+			margin: 0;
+			padding: 20px;
+			font-weight: bold;
+		}
+	</style>
+
+	<script src="{{ asset('js/ux.js') }}"></script>
+
+{% endblock %}

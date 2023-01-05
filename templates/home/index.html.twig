@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+
+	<section class="GlobalHeader">
+		<div class="GlobalHeaderTitle">
+			<h1>Page d'Accueil</h1>
+		</div>
+	</section>
+
+	<section class="GlobalMain">
+		<div class="GlobalMainTitle">
+			<h2>Marlye Cotrie Symfony</h2>
+		</div>
+
+		<h2 class="titleHome">Voici les stack utiliser pour faire ce site web :</h2>
+
+		<div class="langDem">
+			<li>Symfony</li>
+			<li>Php</li>
+			<li>Sql</li>
+			<li>Javascript</li>
+			<li>Html</li>
+			<li>Css</li>
+		</div>
+
+		<h2 class="titleHome">N'hésitez pas à le visiter :D</h2>
+
+		<h2 class="titleHome">Voici l'adresse mail test pour naviguer sans mettre vos informations personel :</br></br>Email : <font>testtesteur@gmail.com</font></br>Mot de passe : <font>LetesteurMdp</font></h2>
+
+		
+
+	</section>
+
+	<style>
+
+		.titleHome{
+			text-align: center;
+		}
+
+		.langDem{
+			list-style-type: decimal;
+			text-align: left;
+			font-size: 20px;
+			color: blue;
+		}
+
+		font {
+			color: green;
+		}
+	</style>
+
+{% endblock %}

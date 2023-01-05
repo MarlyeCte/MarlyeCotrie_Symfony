@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Administrateur
+{% endblock %}
+
+{% block body %}
+
+	<section class="GlobalHeader">
+		<div class="GlobalHeaderTitle">
+			<h1>Page Admin</h1>
+		</div>
+	</section>
+
+	<section class="GlobalMain">
+		<section class="GlobalMainTitle">
+			<h2>Liste de tout les utilisateur qui ce sont incrit :</h2>
+		</section>
+
+
+		<table class="viewAllUser">
+
+			<tr>
+				<th>Prénom</th>
+				<th>Nom</th>
+				<th>Email</th>
+				<th>Role</th>
+                <th>Admin</th>
+			</tr>
+			{% for user in users %}
+				<tr>
+					<td>{{user.prenom}}</td>
+					<td>{{user.nom}}</td>
+					<td>{{user.email}}</td>
+                    {% for unrole in user.roles %}
+                        <td>{{unrole}}</td>
+                    {% endfor %}
+				</tr>
+			{% endfor %}
+
+		</table>
+
+		{# {% for user in users %}
+            {{user.prenom}}<br/>
+            {{user.email}}<br/>
+            {{user.nom}}<br/>
+        {% endfor %} #}
+
+	</section>
+
+	<style>
+
+		.viewAllUser {
+			border-collapse: collapse;
+		}
+
+		th {
+			width: 30%;
+		}
+
+		td {
+			text-align: center;
+			padding: 5px;
+		}
+
+        .viewAllUser,
+        th,
+        td{
+            border: 1px solid;
+        }
+
+	</style>
+
+{% endblock %}

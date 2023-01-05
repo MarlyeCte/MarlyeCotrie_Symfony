@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscrivez-vous
+{% endblock %}
+
+{% block body %}
+
+	<section class="GlobalHeader">
+		<div class="GlobalHeaderTitle">
+			<h1>Inscrivez vous</h1>
+
+
+			{{ form_start(registrationForm) }}
+			<div class="containerForm">
+
+
+				<div class="containerInputAll">
+					<div class="inputStyle">
+						{{ form_row(registrationForm.prenom, { label: 'Entrée votre Prénom'}) }}
+					</div>
+				</div>
+				
+				<div class="containerInputAll">
+					<div class="inputStyle">
+						{{ form_row(registrationForm.nom, { label: 'Entrée votre Nom'}) }}
+					</div>
+				</div>
+
+				<div class="containerInputAll">
+					<div class="inputStyle">
+						{{ form_row(registrationForm.email, { label: 'Entrée votre adresse Email'}) }}
+					</div>
+				</div>
+
+				<div class="containerInputAll">
+					<div class="inputStyle">
+						{{ form_row(registrationForm.plainPassword, { label: 'Entrée votre Mot de passe' }) }}
+					</div>
+				</div>
+
+				<button type="submit" class="btn">Inscription</button>
+			</div>
+			{{ form_end(registrationForm) }}
+
+		</div>
+	</section>
+{% endblock %}

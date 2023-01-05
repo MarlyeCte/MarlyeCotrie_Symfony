@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre profil utilisateur
+{% endblock %}
+
+{% block body %}
+
+	<section class="GlobalHeader">
+		<div class="GlobalHeaderTitle">
+			<h1>Page Profil</h1>
+		</div>
+	</section>
+
+	<section class="GlobalMain">
+		<div class="GlobalMainTitle">
+			<h2>Voici vos informations :</h2>
+		</div>
+
+		<section class="infoProfil">
+			<h3>Votre Nom : {{ app.user.nom }}</h3>
+			<h3>Votre Prénom : {{ app.user.prenom }}</h3>
+			<h3>Votre adresse mail : {{ app.user.userIdentifier }}</h3>
+		</section>
+
+	</section>
+
+	<style>
+
+		.infoProfil {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			flex-direction: column;
+			border-radius: 20px;
+			width: 300px;
+			height: 320px;
+			position: relative;
+			transition: all 0.2s ease-out 0s;
+			box-shadow: rgb(0 0 0 / 50%) 0 1px 13px 7px inset;
+		}
+
+		.infoProfil h3{
+			text-align: center;
+			font-size: 20px;
+		}
+
+	</style>
+
+{% endblock %}
